@@ -51,8 +51,32 @@ namespace Lalalend_3.src.core.commands.temperature
 
             presenter.ShowChart(new List<Series> { minTemp, avgTemp, maxTemp });
 
-            // Info display
-            presenter.ShowAdditionalInfo("Дополнительная информация отсуствует");
+            float maxTemperatureDifference = 0;
+            int maxTemperatureDifferenceIndex = -1;
+            for (int i = 0; i < data.Count; i++)
+            {
+                float minTemperature = data[i][1];
+                float maxTemperature = data[i][3];
+                float temperatureDifference = maxTemperature - minTemperature;
+                if (temperatureDifference > maxTemperatureDifference)
+                {
+                    maxTemperatureDifference = temperatureDifference;
+                    maxTemperatureDifferenceIndex = i;
+                }
+            }
+
+            // Show maximum temperature difference and date
+            if (maxTemperatureDifferenceIndex >= 0)
+            {
+                float maxTemperature = data[maxTemperatureDifferenceIndex][3];
+                float minTemperature = data[maxTemperatureDifferenceIndex][1];
+                string date = data[maxTemperatureDifferenceIndex][0].ToString();
+                presenter.ShowAdditionalInfo($"Самый сильный перепад температуры за месяц: {maxTemperatureDifference} (на {date} число), максимальная температура: {maxTemperature}, минимальная температура: {minTemperature}");
+            }
+            else
+            {
+                presenter.ShowAdditionalInfo("Данные отсутствуют");
+            };
         }
     }
 }
