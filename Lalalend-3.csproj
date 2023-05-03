@@ -48,6 +48,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="src\core\commands\AbstractCommandFactory.cs" />
+    <Compile Include="src\core\commands\inflation\InflationCommand.cs" />
+    <Compile Include="src\core\commands\inflation\InflationCommandFactory.cs" />
     <Compile Include="src\core\commands\temperature\TemperatureCommand.cs" />
     <Compile Include="src\core\commands\temperature\TemperatureCommandFactory.cs" />
     <Compile Include="src\core\presenter\ChartPresenter.cs" />
