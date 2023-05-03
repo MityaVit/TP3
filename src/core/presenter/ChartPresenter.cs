@@ -1,5 +1,6 @@
 ﻿using Lalalend_3.core.commands;
 using Lalalend_3.src.core.commands;
+using Lalalend_3.src.core.commands.temperature;
 using Lalalend_3.src.view;
 using System;
 using System.Collections.Generic;
@@ -18,7 +19,7 @@ namespace Lalalend_3.core
         static Dictionary<string, Func<AbstractCommandFactory>> commands
             = new Dictionary<string, Func<AbstractCommandFactory>>()
             {
-
+                {"Температура", () => new TemperatureCommandFactory()}
             };
 
         AbstractCommandFactory commandFactory;

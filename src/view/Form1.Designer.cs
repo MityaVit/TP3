@@ -37,7 +37,6 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
@@ -49,7 +48,7 @@
             "12321312",
             "asdasd",
             "asdsadas"});
-            this.comboBox1.Location = new System.Drawing.Point(206, 103);
+            this.comboBox1.Location = new System.Drawing.Point(180, 52);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(330, 21);
             this.comboBox1.TabIndex = 2;
@@ -57,7 +56,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(31, 96);
+            this.button1.Location = new System.Drawing.Point(31, 45);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(143, 33);
             this.button1.TabIndex = 0;
@@ -68,9 +67,9 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(18, 194);
+            this.dataGridView1.Location = new System.Drawing.Point(590, 189);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(331, 477);
+            this.dataGridView1.Size = new System.Drawing.Size(382, 326);
             this.dataGridView1.TabIndex = 1;
             // 
             // openFileDialog1
@@ -79,9 +78,9 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(462, 413);
+            this.richTextBox1.Location = new System.Drawing.Point(590, 12);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(382, 181);
+            this.richTextBox1.Size = new System.Drawing.Size(382, 167);
             this.richTextBox1.TabIndex = 3;
             this.richTextBox1.Text = "";
             // 
@@ -92,7 +91,7 @@
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(587, 69);
+            this.chart1.Location = new System.Drawing.Point(31, 104);
             this.chart1.Name = "chart1";
             series1.BorderColor = System.Drawing.Color.Lime;
             series1.BorderWidth = 2;
@@ -103,24 +102,15 @@
             series1.Name = "Series1";
             series1.YValuesPerPoint = 4;
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(268, 218);
+            this.chart1.Size = new System.Drawing.Size(479, 411);
             this.chart1.TabIndex = 2;
             this.chart1.Text = "chart1";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(205, 77);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(331, 20);
-            this.textBox1.TabIndex = 1;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1057, 683);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(1007, 546);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.richTextBox1);
@@ -132,7 +122,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -143,7 +132,6 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
