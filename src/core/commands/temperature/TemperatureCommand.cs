@@ -30,26 +30,26 @@ namespace Lalalend_3.src.core.commands.temperature
             presenter.ShowGrid(columnsName, rows);
 
             // Chart display
-            Series populationSeries = new Series();
-            populationSeries.ChartType = SeriesChartType.Spline;
-            populationSeries.YAxisType = AxisType.Primary;
-            populationSeries.Name = "Температура минимальная";
-            data.ForEach((point) => populationSeries.Points.AddXY(point[0], point[1]));
+            Series minTemp = new Series();
+            minTemp.ChartType = SeriesChartType.Spline;
+            minTemp.YAxisType = AxisType.Primary;
+            minTemp.Name = "Температура минимальная";
+            data.ForEach((point) => minTemp.Points.AddXY(point[0], point[1]));
 
-            Series growSeries = new Series();
-            growSeries.ChartType = SeriesChartType.FastLine;
-            growSeries.YAxisType = AxisType.Secondary;
-            growSeries.Name = "Температура средняя";
-            data.ForEach((point) => growSeries.Points.AddXY(point[0], point[2]));
+            Series avgTemp = new Series();
+            avgTemp.ChartType = SeriesChartType.FastLine;
+            avgTemp.YAxisType = AxisType.Secondary;
+            avgTemp.Name = "Температура средняя";
+            data.ForEach((point) => avgTemp.Points.AddXY(point[0], point[2]));
 
-            Series growSeries1 = new Series();
-            growSeries1.ChartType = SeriesChartType.FastLine;
-            growSeries1.YAxisType = AxisType.Secondary;
-            growSeries1.Name = "Температура максимальная";
-            data.ForEach((point) => growSeries1.Points.AddXY(point[0], point[3]));
+            Series maxTemp = new Series();
+            maxTemp.ChartType = SeriesChartType.FastLine;
+            maxTemp.YAxisType = AxisType.Secondary;
+            maxTemp.Name = "Температура максимальная";
+            data.ForEach((point) => maxTemp.Points.AddXY(point[0], point[3]));
 
 
-            presenter.ShowChart(new List<Series> { populationSeries, growSeries, growSeries1 });
+            presenter.ShowChart(new List<Series> { minTemp, avgTemp, maxTemp });
 
             // Info display
             presenter.ShowAdditionalInfo("Дополнительная информация отсуствует");
