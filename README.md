@@ -29,3 +29,11 @@
 	> 2009;6,9
 	> 
 	> ...
+## Пример работы
+### С температурой:
+![изображение](https://user-images.githubusercontent.com/106722909/236165155-b78385e7-29ca-4a15-a33e-853cf21b4209.png)
+### С инфляцией:
+![изображение](https://user-images.githubusercontent.com/106722909/236165551-ee7532ca-6165-41cf-9a40-46dc2713ec16.png)
+
+
+
